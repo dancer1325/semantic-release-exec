@@ -91,52 +91,52 @@ $ npm install @semantic-release/exec -D
 |------------------|--------------------------------------------------------------------------|
 | `exit code`      | `0` if the verification is successful, or any other exit code otherwise. |
 | `stdout`         | Only the reason for the verification to fail can be written to `stdout`. |
-| `stderr`         | Can be used for logging.                                                 |
+| `stderr`         | Common uses for logging.                                                 |
 
 ## generateNotesCmd
 
 | Command property | Description                                                                                                         |
 |------------------|---------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error. |
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error. |
 | `stdout`         | Only the release note must be written to `stdout`.                                                                  |
-| `stderr`         | Can be used for logging.                                                                                            |
+| `stderr`         | Common uses for logging.                                                                                            |
 
 ## prepareCmd
 
 | Command property | Description                                                                                                         |
 |------------------|---------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error. |
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error. |
 | `stdout`         | Can be used for logging.                                                                                            |
-| `stderr`         | Can be used for logging.                                                                                            |
+| `stderr`         | Common uses for logging.                                                                                            |
 
 ## addChannelCmd
 
-| Command property | Description                                                                                                                                                                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error.                                                                                                                                |
-| `stdout`         | The `release` information can be written to `stdout` as parseable JSON (for example `{"name": "Release name", "url": "http://url/release/1.0.0"}`). If the command write non parseable JSON to `stdout` no `release` information will be returned. |
-| `stderr`         | Can be used for logging.                                                                                                                                                                                                                           |
+| Command property | Description                                                                                                                                                                                                                                    |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error.                                                                                                                            |
+| `stdout`         | The `release` information can be written to `stdout` as parseable JSON (_Example_ `{"name": "Release name", "url": "http://url/release/1.0.0"}`). If the command write non parseable JSON to `stdout` no `release` information will be returned. |
+| `stderr`         | Common uses for logging.                                                                                                                                                                                                                       |
 
 ## publishCmd
 
 | Command property | Description                                                                                                                                                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error.                                                                                                                                |
-| `stdout`         | The `release` information can be written to `stdout` as parseable JSON (for example `{"name": "Release name", "url": "http://url/release/1.0.0"}`). If the command write non parseable JSON to `stdout` no `release` information will be returned. |
-| `stderr`         | Can be used for logging.                                                                                                                                                                                                                           |
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error.                                                                                                                                |
+| `stdout`         | The `release` information can be written to `stdout` as parseable JSON (_Example_ `{"name": "Release name", "url": "http://url/release/1.0.0"}`). If the command write non parseable JSON to `stdout` no `release` information will be returned. |
+| `stderr`         | Common uses for logging.                                                                                                                                                                                                                           |
 
 ## successCmd
 
 | Command property | Description                                                                                                         |
 |------------------|---------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error. |
-| `stdout`         | Can be used for logging.                                                                                            |
-| `stderr`         | Can be used for logging.                                                                                            |
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error. |
+| `stdout`         | Common uses for logging.                                                                                            |
+| `stderr`         | Common uses for logging.                                                                                            |
 
 ## failCmd
 
 | Command property | Description                                                                                                         |
 |------------------|---------------------------------------------------------------------------------------------------------------------|
-| `exit code`      | Any non `0` code is considered as an unexpected error and will stop the `semantic-release` execution with an error. |
-| `stdout`         | Can be used for logging.                                                                                            |
-| `stderr`         | Can be used for logging.                                                                                            |
+| `exit code`      | If !=  `0` == unexpected error, -> `semantic-release` execution is stopped with an error. |
+| `stdout`         | Common uses for logging.                                                                                            |
+| `stderr`         | Common uses for logging.                                                                                             |
